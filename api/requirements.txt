@@ -1,0 +1,9 @@
+ipykernel
+transformers
+torch
+scikit-learn
+pandas
+numpy
+uvicorn
+fastapi
+pydantic
