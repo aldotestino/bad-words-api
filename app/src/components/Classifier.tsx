@@ -57,14 +57,14 @@ function Classifier() {
         <p className='font-mono break-all font-medium'>/api/v1/predict</p>
       </div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-2 sm:flex-row sm:gap-4'>
+        <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col sm:flex-row gap-2'>
           <FormField
             control={form.control}
             name="text"
             render={({ field }) => (
               <FormItem className='flex-1'>
                 <FormControl>
-                  <Input placeholder="" {...field} />
+                  <Input placeholder="Try it out!" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -72,7 +72,7 @@ function Classifier() {
           />
           <Button type="submit">
             {!loading ? <BrainCircuit className='w-4 h-4 mr-2' /> : <Spinner className='w-4 h-4 mr-2' />}
-            <span>Check words</span>
+            <span>Check</span>
           </Button>
         </form>
       </Form>
