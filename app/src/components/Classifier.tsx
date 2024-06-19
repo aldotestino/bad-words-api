@@ -50,14 +50,14 @@ function Classifier() {
   }
 
   return (
-    <div className='grainy-light border rounded-xl p-4 space-y-4'>
+    <div className='bg-slate-50 dark:bg-slate-900 border rounded-xl p-4 space-y-4'>
       <div className='flex items-center gap-4'>
         <Badge>POST</Badge>
         <Separator orientation='vertical' className='h-[24px]' />
         <p className='font-mono break-all font-medium'>/api/v1/predict</p>
       </div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col sm:flex-row gap-2'>
+        <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-2 sm:flex-row sm:gap-4'>
           <FormField
             control={form.control}
             name="text"
