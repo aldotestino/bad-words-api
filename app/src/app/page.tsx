@@ -46,7 +46,7 @@ export default async function Home() {
           {whyChoose.map((item, index) => 
             <Card key={index} className='transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-md'>
               <CardHeader>
-                <div className='bg-muted w-fit p-3 rounded-md mb-2'>
+                <div className='bg-primary text-primary-foreground w-fit p-3 rounded-md mb-2'>
                   {item.icon}
                 </div>
                 <CardTitle>{item.title}</CardTitle>
