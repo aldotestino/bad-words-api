@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { buttonVariants } from './ui/button';
-import { Sparkle, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { ModeToggle } from './ModeToggle';
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
         <Link href="/" className='font-mono text-xl font-semibold'>🤬BadwordsAPI</Link>
         <div className='flex items-center gap-2'>
           <Link href="https://github.com/aldotestino/bad-words-api" target='_blank' className={buttonVariants({ variant: 'outline', size: 'sm' })}>
-            <Star className='w-4 h-4 mr-2 text-yellow-500' />
+            <Star className='w-4 h-4 mr-2' />
             <span>GitHub</span>
           </Link>
           <ModeToggle />

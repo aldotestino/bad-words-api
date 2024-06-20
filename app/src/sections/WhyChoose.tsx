@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { whyChoose } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 function WhyChooseCard({ item }: {item: typeof whyChoose[0]}) {
   return (
@@ -17,9 +18,13 @@ function WhyChooseCard({ item }: {item: typeof whyChoose[0]}) {
   );
 }
 
-function WhyChoose() {
+function WhyChoose({
+  sectionClassName
+}: {
+  sectionClassName?: string
+}) {
   return (
-    <section className='space-y-8'>
+    <section className={cn('space-y-8', sectionClassName)}>
       <h2 className='text-3xl sm:text-4xl font-bold text-center font-mono'>Why choose our API?</h2>
       <div className='mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-12'>
         {whyChoose.map((item, index) => 
