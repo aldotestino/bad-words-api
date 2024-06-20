@@ -6,7 +6,7 @@ import { ModeToggle } from './ModeToggle';
 
 function Header() {
   return (
-    <header className='z-10 border-b py-4 fixed top-0 w-full bg-background/60 backdrop-blur-lg'>
+    <header className='z-20 border-b py-4 fixed top-0 w-full bg-background/60 backdrop-blur-lg'>
       <div className='px-4 sm:container max-w-scren-lg flex items-center justify-between'>
         <Link href="/" className='font-mono text-xl font-semibold'>🤬BadwordsAPI</Link>
         <div className='flex items-center gap-2'>
