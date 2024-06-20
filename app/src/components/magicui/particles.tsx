@@ -68,9 +68,9 @@ const Particles: React.FC<ParticlesProps> = ({
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1;
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
-  const color = useMemo(() => theme === 'dark' ? '#ffffff' : '#000000', [theme]);
+  const color = useMemo(() => resolvedTheme === 'dark' ? '#ffffff' : '#000000', [resolvedTheme]);
 
   useEffect(() => {
     if (canvasRef.current) {
