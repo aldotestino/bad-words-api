@@ -54,7 +54,7 @@ function Classifier() {
       <div className='flex items-center gap-4'>
         <Badge>POST</Badge>
         <Separator orientation='vertical' className='h-[24px]' />
-        <p className='font-mono break-all font-medium'>/api/v1/predict</p>
+        <p className='font-mono break-all font-medium'>http://localhost:8000/predict</p>
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col sm:flex-row gap-2'>
