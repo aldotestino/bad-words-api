@@ -79,7 +79,7 @@ function Classifier() {
       <div className='border-2 border-dashed h-40 rounded-xl grid place-items-center'>
         {!prediction ? 
           <p className='font-mono font-medium text-muted-foreground'>Results will appear here</p> : 
-          <div className='text-center'>
+          <div className='text-center text-lg'>
             <p className='font-mono font-semibold'>{prediction.prediction === 0 ? '🤗' : '🤬'}{' '}{prediction.description}</p>
             <p className='font-semibold'><span className='text-muted-foreground'>Score:</span>{' '}{Math.round(prediction.score * 100).toFixed(2)}%</p>
           </div>

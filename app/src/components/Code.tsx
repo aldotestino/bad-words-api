@@ -4,11 +4,11 @@ import { cn } from '@/lib/utils';
 import { ScrollArea, ScrollBar } from './ui/scroll-area';
 import { Highlight, themes } from 'prism-react-renderer';
 
-function Code({ codeBlock }: {codeBlock: string}) {
+function Code({ codeBlock, language }: {codeBlock: string, language: string}) {
   return (
     <div className='p-6 w-full max-w-fit bg-[#282C34] rounded-xl shadow'>
       <ScrollArea>
-        <Highlight theme={themes.oneDark} code={codeBlock} language='tsx'>
+        <Highlight theme={themes.oneDark} code={codeBlock} language={language}>
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre style={style} className={cn(className, 'w-fit')}>
               {tokens.map((line, i) => {
