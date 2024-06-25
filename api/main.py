@@ -22,7 +22,7 @@ app.add_middleware(
   allow_headers=["*"],
 )
 
-model = BERTBadWordClassifier()
+model = BERTBadWordClassifier(model_path='classifier_4000.pth')
 
 class DataModel(BaseModel):
     text: str

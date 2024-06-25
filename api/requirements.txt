@@ -7,3 +7,4 @@ numpy
 uvicorn
 fastapi
 pydantic
+upstash_redis

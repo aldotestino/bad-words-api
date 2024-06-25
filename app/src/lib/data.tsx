@@ -41,7 +41,7 @@ const pyCode = `res = requests.post('http://localhost:8000/predict',
 
 const goCode = `res, err := http.Post("http://localhost:8000/predict",
   "application/json",
-  bytes.NewBuffer([]byte("{\"text\": \"Hello, World!\"}"))
+  bytes.NewBuffer([]byte("{\\"text\\": \\"Hello, World!\\"}"))
 )`;
 
 export const codes = {

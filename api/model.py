@@ -4,7 +4,7 @@ from torch import nn
 import torch
 
 class BERTBadWordClassifier(nn.Module):
-  def __init__(self):
+  def __init__(self, model_path: str = 'classifier.pth'):
     super(BERTBadWordClassifier, self).__init__()
     self.bert_model_name = "bert-base-cased"
     self.num_classes = 2
@@ -13,7 +13,7 @@ class BERTBadWordClassifier(nn.Module):
     self.device = torch.device("mps" if torch.backends.mps.is_built() else "cuda" if torch.cuda.is_available() else "cpu")
     self.dropout = nn.Dropout(0.1)
     self.fc = nn.Linear(self.bert.config.hidden_size, self.num_classes)
-    self.load_state_dict(torch.load('classifier.pth', map_location=self.device))
+    self.load_state_dict(torch.load(model_path, map_location=self.device))
     self.to(self.device)
 
   def forward(self, input_ids, attention_mask):

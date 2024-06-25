@@ -1,5 +1,5 @@
 __pycache__
 .venv
 raw_dataset.csv
-classifier.pth
+classifier*
 .env.local
